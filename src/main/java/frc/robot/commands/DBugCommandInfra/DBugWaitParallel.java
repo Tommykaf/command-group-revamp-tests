@@ -20,7 +20,7 @@ public class DBugWaitParallel extends DBugParallel {
         if (!this.wasCancelled()) {
             boolean isDone = true;
             for (DBugCommand cmd : commands) {
-                if (!cmd.hasFinished()) {
+                if (!cmd.isFinished()) {
                     isDone = false;
                 }
             }

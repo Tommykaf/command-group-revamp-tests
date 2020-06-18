@@ -37,7 +37,7 @@ public class TimerCommand extends DBugCommand {
     @Override
     public void execute() {
         if (placeInCycle >= cycles) {
-            placeInCycle = 0;
+            placeInCycle = 1;
             currentIteration++;
         } else {
             placeInCycle++;

@@ -51,11 +51,10 @@ public abstract class DBugCommandGroup extends DBugCommand {
     public void execute() {
         if (head == null) {
             this._runNextSequential();
-        } else {
-             
+        } else {    
             if (head.wasCancelled()) {
                 this.cancel();
-            } else if (head.hasFinished()) {
+            } else if (head.isFinished()) {
                 this._runNextSequential();
             }
         }

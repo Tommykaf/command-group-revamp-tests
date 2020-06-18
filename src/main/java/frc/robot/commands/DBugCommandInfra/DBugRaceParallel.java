@@ -18,7 +18,7 @@ public class DBugRaceParallel extends DBugParallel {
 
         if (!this.wasCancelled()) {
             for (DBugCommand cmd : commands) {
-                if (cmd.hasFinished()) {
+                if (cmd.isFinished()) {
                     isFinished = true;
                     break;
                 }

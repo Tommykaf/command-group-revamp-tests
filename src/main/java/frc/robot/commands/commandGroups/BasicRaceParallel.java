@@ -1,6 +1,7 @@
 package frc.robot.commands.commandGroups;
 
 import frc.robot.commands.TimerCommand;
+import frc.robot.commands.DBugCommandInfra.DBugCommand;
 import frc.robot.commands.DBugCommandInfra.DBugCommandGroup;
 import frc.robot.subsystems.ExampleSubsystem;
 
@@ -16,5 +17,10 @@ public class BasicRaceParallel extends DBugCommandGroup {
 
     public BasicRaceParallel() {
         this(false);
+    }
+
+    public BasicRaceParallel(DBugCommand cmd1, DBugCommand cmd2) {
+        addRaceParallel(() ->  cmd1,
+                        () ->  cmd2);
     }
 }

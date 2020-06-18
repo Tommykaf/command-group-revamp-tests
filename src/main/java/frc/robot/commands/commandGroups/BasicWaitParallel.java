@@ -1,6 +1,7 @@
 package frc.robot.commands.commandGroups;
 
 import frc.robot.commands.TimerCommand;
+import frc.robot.commands.DBugCommandInfra.DBugCommand;
 import frc.robot.commands.DBugCommandInfra.DBugCommandGroup;
 import frc.robot.subsystems.ExampleSubsystem;
 
@@ -16,6 +17,11 @@ public class BasicWaitParallel extends DBugCommandGroup {
 
     public BasicWaitParallel() {
         this(false);
+    }
+
+    public BasicWaitParallel(DBugCommand cmd1, DBugCommand cmd2) {
+        addWaitParallel(() ->  cmd1,
+                        () ->  cmd2);
     }
     
 }

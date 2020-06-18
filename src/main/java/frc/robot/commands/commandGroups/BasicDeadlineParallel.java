@@ -1,6 +1,7 @@
 package frc.robot.commands.commandGroups;
 
 import frc.robot.commands.TimerCommand;
+import frc.robot.commands.DBugCommandInfra.DBugCommand;
 import frc.robot.commands.DBugCommandInfra.DBugCommandGroup;
 import frc.robot.subsystems.ExampleSubsystem;
 
@@ -17,5 +18,11 @@ public class BasicDeadlineParallel extends DBugCommandGroup {
 
     public BasicDeadlineParallel() {
         this(false);
+    }
+
+    public BasicDeadlineParallel(DBugCommand cmd1, DBugCommand cmd2, DBugCommand cmd3) {
+        addDeadlineParallel(() ->  cmd1,
+                        () ->  cmd2,
+                        () -> cmd3);
     }
 }

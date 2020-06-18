@@ -12,6 +12,8 @@ public abstract class DBugCommand extends CommandBase {
 
   @Override
   public final void initialize() {
+    wasCancelled = false;
+    hasFinished = false;
     init();
   }
 
@@ -23,7 +25,7 @@ public abstract class DBugCommand extends CommandBase {
   @Override
   public final boolean isFinished() {
     hasFinished = hasFinished || endCondition();
-    return endCondition();
+    return hasFinished;
   }
 
   public abstract boolean endCondition();
@@ -31,17 +33,13 @@ public abstract class DBugCommand extends CommandBase {
   
   @Override
   public void cancel() {
-    super.cancel();
     wasCancelled = true;
+    super.cancel();
   }
   
   public final boolean wasCancelled() {
     return wasCancelled;
   };
-  
-  public final boolean hasFinished() {
-    return hasFinished;
-  }
   
   @Override
   public void end(boolean interrupted) {
