@@ -23,7 +23,7 @@ public class TestCancelParallels {
             TestCommands.runCommand(cmd, false);
         }
         cmd.cancel();
-        for (int i = 0 ; i < 7 ; i++) {
+        for (int i = 0 ; i < defaultTolerance ; i++) {
             iterations++;
             TestCommands.runCommand(cmd, false);
         }
@@ -43,7 +43,7 @@ public class TestCancelParallels {
             TestCommands.runCommand(cmd, false);
         }
         cmd1.cancel();
-        for (int i = 0 ; i < 7 ; i++) {
+        for (int i = 0 ; i < defaultTolerance ; i++) {
             iterations++;
             TestCommands.runCommand(cmd, false);
         }
@@ -61,7 +61,7 @@ public class TestCancelParallels {
             TestCommands.runCommand(cmd, false);
         }
         cmd.cancel();
-        for (int i = 0 ; i < 3 ; i++) {
+        for (int i = 0 ; i < defaultTolerance ; i++) {
             iterations++;
             TestCommands.runCommand(cmd, false);
         }
@@ -81,7 +81,7 @@ public class TestCancelParallels {
             TestCommands.runCommand(cmd, false);
         }
         cmd1.cancel();
-        for (int i = 0 ; i < 3 ; i++) {
+        for (int i = 0 ; i < defaultTolerance ; i++) {
             iterations++;
             TestCommands.runCommand(cmd, false);
         }
@@ -99,7 +99,7 @@ public class TestCancelParallels {
             TestCommands.runCommand(cmd, false);
         }
         cmd.cancel();
-        for (int i = 0 ; i < 3 ; i++) {
+        for (int i = 0 ; i < defaultTolerance ; i++) {
             iterations++;
             TestCommands.runCommand(cmd, false);
         }
@@ -120,7 +120,7 @@ public class TestCancelParallels {
             TestCommands.runCommand(cmd, false);
         }
         cmd3.cancel();
-        for (int i = 0 ; i < 3 ; i++) {
+        for (int i = 0 ; i < defaultTolerance ; i++) {
             iterations++;
             TestCommands.runCommand(cmd, false);
         }
